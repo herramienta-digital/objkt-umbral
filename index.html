@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="bg.png" />
+    <title>Mundos por Encriptar | Nueva Filosofía Tecnológica</title>
+</head>
+<body>
+
+    <div id="linea"></div>
+
+    <video autoplay loop class="particula" id="fuego" src="particulas/fuego.mp4"></video>
+    <video autoplay loop class="particula" id="tiempo" src="particulas/tiempo.mp4"></video>
+    <video autoplay loop class="particula" id="glitch" src="particulas/glitch.mp4"></video>
+    <video autoplay loop class="particula" id="descanso" src="particulas/descanso.mp4"></video>
+
+    <img class="but-rel but-out" id="b_ft" src="rel-2.png"/>
+    <img class="but-rel but-out" id="b_fd" src="rel-2.png"/>
+    <img class="but-rel but-out" id="b_fg" src="rel-2.png"/>
+    <img class="but-rel but-out" id="b_dg" src="rel-2.png"/>
+    <img class="but-rel but-out" id="b_dt" src="rel-2.png"/>
+    <img class="but-rel but-out" id="b_tg" src="rel-2.png"/>
+
+    <img class="but-rel but-out" id="b_tfg" src="rel-3.png"/>
+    <img class="but-rel but-out" id="b_fgd" src="rel-3.png"/>
+    <img class="but-rel but-out" id="b_tgd" src="rel-3_inv.png"/>
+    <img class="but-rel but-out" id="b_ftd" src="rel-3_inv.png"/>
+
+    <img class="but-rel but-out" id="b_all" src="rel-4.png"/>
+
+    <div class="rel" id="fuegotiempo">
+      Abrir la filosofía hacia otra cosa que la historización infinita. Quebrar el argumento de autoridad, la recurrencia a un canon histórico, la retórica de la herencia. 
+    </div>
+
+    <div class="rel" id="fuegodescanso">
+      Si el espacio tuvo un comienzo, su final es la inexistencia de cosas extensas, o de la extensión donde las cosas suceden. Nunca nada se habrá extendido. Espacio del ya no una palabra.
+    </div>
+
+    <div class="rel" id="fuegoglitch">
+      la invención de lo trascendental. La vieja distinción entre el mundo y uno mismo se tradujo en un esquema de mediación. Ni el sujeto ni el objeto son accesibles por sí mismos: todo acceso está mediado.
+    </div>
+
+    <div class="rel" id="descansoglitch">
+      Si se pudiera dibujar un horizonte del pensamiento actual se encuentra allí: en la clausura del lenguaje. Abrir la filosofía hacia el exceso de lo trascendental (del acceso, de la correlación), abrir la filosofía hacia existentes que escapan al lenguaje (objetos, cosas, animales, materias, vegetales, artefactos, piedras). 
+    </div>
+
+    <div class="rel" id="descansotiempo">
+      Abrir la filosofía hacia otra cosa que la historización infinita (o los múltiples modos de la contextualización, localización, etc.). Quebrar el argumento de autoridad, la recurrencia a un canon histórico, la retórica de la herencia.  
+    </div>
+
+    <div class="rel" id="tiempoglitch">
+      Lo existente como acontecimiento en el tiempo. El tiempo como un acontecimiento de los existentes. Si el tiempo tuvo un comienzo, su final es la inexistencia de presentes, pasados, futuros. Nunca nada habrá sido. Tiempo del ya no una palabra.
+    </div>
+
+    <div class="rel" id="tiempofuegoglitch">
+      Estratigrafía de la huella mineral. Vacío que permite los cuerpos discretos. Gran recipiente de todo lo existente. Ondas, flujos, coordenadas. Lo estriado, lo sedimentado, lo plegado. El espacio donde todo existente adquiere realidad
+    </div>
+
+    <div class="rel" id="fuegoglitchdescanso">
+      Insistir discutiendo lo problemático de lo humano. Pero allí nunca termina de ser posible su exceso. Si se pudiera dibujar un horizonte del pensamiento actual se encuentra allí: en la clausura de lo humano
+    </div>
+
+    <div class="rel" id="tiempoglitchdescanso">
+      Ese mundo que hace que algo como lo propio exista. Construcción de sentidos con alteridades tejidas por una visión común. Lugar donde las particiones ontológicas suceden: una grilla de certezas que atribuyen rasgos propios a lo que existe. 
+    </div>
+
+    <div class="rel" id="fuegotiempodescanso">
+      Tu mundo. Mi mundo. Mundo animal. Mundo humano. Mundo natural. Mundo artificial. Todo sobre el borde de lo que no hace mundo. Lo inmundo. La tierra no es sino los mundos del mundo. Mundos infinitos que se tocan, o no, en la distancia de lo ínfimo. Mundo del ya no una palabra. 
+    </div>
+
+    <div class='rel' id="frase-final">
+      Lo oculto: el no-valor es el núcleo del valor. Lo cripto cruje. El sin sentido de una cadena infinita de bloques minando la persistencia financiera. Aceleración del vértigo de riqueza inmediata. Lo sin-mundo de una cadena de automatismos minerales. Y en el murmullo de lo invisible, eso que todavía no podemos pensar. 
+    </div>
+    
+</body>
+</html>
+
+<style>
+
+    @font-face {
+      font-family: "Sneaky-Times";
+      src: url("fonts/Sneaky-Times.woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body{
+        background-color: black;
+        font-family: 'Sneaky-Times', sans-serif;
+        font-size: 24px;
+    }
+
+    #linea{
+        width: 100%;
+        height: 1px;
+        background-color: black;
+    }
+
+    .particula{
+      position: absolute;
+      width: 24vw;
+      min-width: 130px;
+      max-width: 340px;
+      filter: saturate(0%);
+      transition: filter 1s;
+      z-index: -5;
+    }
+
+    .activo{
+      filter: saturate(100%);
+    }
+
+    #fuego{
+      left: 10px;
+      top: 10px;
+    }
+
+    #tiempo{
+      right: 10px;
+      top: 10px;
+    }
+
+    #glitch{
+      left: 10px;
+      bottom: 10px;
+    }
+
+    #descanso{
+      right: 10px;
+      bottom: 10px;
+    }
+
+    .but-rel{
+      transition: opacity 1s, filter 500ms;
+      z-index: 10;
+      cursor: pointer;
+      width: 5vw;
+      min-width: 60px;
+    }
+
+    .but-rel:hover{
+      opacity: 0.5;
+      filter: drop-shadow(0px 0px 5px white);
+    }
+
+    .but-rel:active{
+      opacity: 0.7;
+      filter: drop-shadow(0px 0px 7px white);
+    }
+
+    .but-out{
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .but-in{
+      opacity: 0.4;
+      pointer-events: all;
+    }
+
+    .but-activo{
+      opacity: 1;
+      filter: drop-shadow(0px 0px 8px white);
+    }
+
+    #b_ft{
+      position: fixed;
+      margin-left: calc(50% - 20px);
+      margin-top: calc(3vw);
+    }
+
+    #b_fg{
+      position: fixed;
+      transform: rotate(90deg);
+      left: 4vw;
+      margin-top: calc(50vh - 20px);
+    }
+
+    #b_fd{
+      position: fixed;
+      margin-left: calc(50% - 20px);
+      margin-top: calc(5vw + 80px);
+      transform: rotate(30deg);
+    }
+
+    #b_dt{
+      position: fixed;
+      transform: rotate(-90deg);
+      right: 4vw;
+      margin-top: calc(50vh - 20px);
+    }
+
+    #b_dg{
+      position: fixed;
+      margin-left: calc(50% - 20px);
+      bottom: calc(4vw);
+    }
+
+    #b_tg{
+      position: fixed;
+      margin-left: calc(50% - 20px);
+      bottom: calc(3vw + 80px);
+      transform: rotate(-30deg);
+    }
+
+    #b_tfg{
+      margin-top: calc(3vw + 40px);
+      position: fixed;
+      margin-left: calc(50% - 20px);
+    }
+
+    #b_fgd{
+      margin-top: calc(50vh - 40px);
+      position: fixed;
+      transform: rotate(-90deg);
+      margin-left: calc(3vw + 70px);
+    }
+
+    #b_tgd{
+      margin-top: calc(50vh - 40px);
+      position: fixed;
+      transform: rotate(90deg);
+      right: calc(3vw + 70px);
+    }
+
+    #b_ftd{
+      margin-top: calc(5vw + 130px);
+      position: fixed;
+      margin-left: calc(50% - 20px);
+    }
+
+    #b_all{
+      position: fixed;
+      left: 51%;
+      top: 50%;
+      transform: translate(-49%, -50%); 
+    }
+
+    .rel{
+      max-width: 50ch;
+      width: 70vw;
+      text-align: center;
+      height: 70vh;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      display: flex;
+      align-items: center;
+      transform: translate(-50%, -50%);
+      font-size: clamp(0.6rem, 3vw, 2rem);
+      color: white;
+      padding: 10px;
+
+      text-shadow: 0px 0px 10px black;
+
+      opacity: 0;
+      pointer-events: none;
+
+      z-index: -3;
+
+      transition: opacity 1s;
+    }
+
+    .rel-activa{
+      opacity: 0.8 !important;
+    }
+
+    #frase-final{
+      color: aqua;
+    }
+
+</style>
+
+<script>
+    const credits = `Project by NFT (Nueva Filosofía Tecnológica). Design & Code by Pablo Somonte Ruano (https://pablo.sx/)`;
+    console.log(credits);
+
+    let viewer = new URLSearchParams(window.location.search).get('viewer');
+    console.log('viewer: ');
+    console.log(viewer);
+
+    const query = `
+  query collectorGallery($address: String!) {
+    hic_et_nunc_token_holder(where: {holder_id: {_eq: $address}, quantity: {_gt: "0"}, token: {supply: {_gt: "0"}}}, order_by: {id: desc}) {
+      token {
+        id
+        artifact_uri
+        display_uri
+        thumbnail_uri
+        timestamp
+        mime
+        title
+        description
+        supply
+        token_tags {
+          tag {
+            tag
+          }
+        }
+        creator {
+          address
+        }
+        swaps(where: {status: {_eq: "0"}}, order_by: {price: asc}) {
+          amount
+          amount_left
+          creator_id
+          price
+        }
+      }
+    }
+  }
+`;
+
+async function fetchGraphQL(operationsDoc, operationName, variables) {
+  const result = await fetch(
+    "https://api.hicdex.com/v1/graphql",
+    {
+      method: "POST",
+      body: JSON.stringify({
+        query: operationsDoc,
+        variables: variables,
+        operationName: operationName
+      })
+    }
+  );
+
+  return await result.json();
+}
+
+async function checkIDs(viewer_address) {
+  const { errors, data } = await fetchGraphQL(query, "collectorGallery", {"address":viewer_address});
+  if (errors) {
+    console.error(errors);
+  }
+  const result = data.hic_et_nunc_token_holder
+
+  const fuego = document.getElementById('fuego');
+  const glitch = document.getElementById('glitch');
+  const tiempo = document.getElementById('tiempo');
+  const descanso = document.getElementById('descanso');
+
+  let listOfIDs = [];
+
+  const importantIDs = [
+      596052,
+      596055,
+      596064,
+      596061
+  ];
+
+  for (let i = 0; i < result.length; i++){
+    listOfIDs.push(result[i].token.id);
+  }
+  console.log('list of IDs: ');
+  console.log(listOfIDs);
+
+  let matchAll = false;
+
+  let mFuego = listOfIDs.includes(importantIDs[0]);
+  let mGlitch = listOfIDs.includes(importantIDs[1]);
+  let mDescanso = listOfIDs.includes(importantIDs[2]);
+  let mTiempo = listOfIDs.includes(importantIDs[3]);
+
+  if (mFuego === true && mGlitch === true && mDescanso === true && mTiempo === true) { 
+    matchAll = true;
+  }
+
+  console.log('¿Fuego? ' + mFuego);
+  console.log('¿Glitch? ' + mGlitch);
+  console.log('¿Descanso? ' + mDescanso);
+  console.log('Tiempo? ' + mTiempo);
+
+  console.log('¿todos? ' + matchAll);
+
+  if (mFuego){
+    fuego.classList.add('activo');
+    fuego.playbackRate = 1;
+  }
+
+  if (mGlitch){
+    glitch.classList.add('activo');
+    glitch.playbackRate = 1;
+  }
+
+  if (mDescanso){
+    descanso.classList.add('activo');
+    descanso.playbackRate = 1;
+  }
+
+  if (mTiempo){
+    tiempo.classList.add('activo');
+    tiempo.playbackRate = 1;
+  }
+
+  //DOBLES
+
+  if (mFuego === true && mTiempo === true){
+    b_ft.classList.add('but-in');
+  }
+
+  if (mFuego === true && mDescanso === true){
+    b_fd.classList.add('but-in');
+  }
+  
+  if (mFuego === true && mGlitch === true){
+    b_fg.classList.add('but-in');
+  }
+
+  if (mDescanso === true && mGlitch === true){
+    b_dg.classList.add('but-in');
+  }
+
+  if (mDescanso === true && mTiempo === true){
+    b_dt.classList.add('but-in');
+  }
+
+  if (mTiempo === true && mGlitch === true){
+    b_tg.classList.add('but-in');
+  }
+
+  //TRIPLES
+  
+  if (mTiempo === true && mFuego === true && mGlitch === true){
+    b_tfg.classList.add('but-in');
+  }
+
+  if (mFuego === true && mGlitch === true && mDescanso === true){
+    b_fgd.classList.add('but-in');
+  }
+
+  if (mTiempo === true && mGlitch === true && mDescanso === true){
+    b_tgd.classList.add('but-in');
+  }
+
+  if (mFuego === true && mTiempo === true && mDescanso === true){
+    b_ftd.classList.add('but-in');
+  }
+
+  //TODOS
+
+  if (matchAll){ b_all.classList.add('but-in'); }
+
+  return result
+}
+
+  fuego.playbackRate = 0.33; 
+  glitch.playbackRate = 0.33; 
+  tiempo.playbackRate = 0.33; 
+  descanso.playbackRate = 0.33; 
+
+  checkIDs(viewer);
+
+  const rels = document.getElementsByClassName('rel');
+  const buts = document.getElementsByClassName('but-rel');
+  const fraseFinal = document.getElementById('frase-final');
+
+  const reset = function(){
+    console.log('reset');
+    for (let i = 0; i < buts.length; i++) {
+      buts[i].classList.remove('but-activo');
+    }
+    for (let j = 0; j < rels.length; j++) {
+      rels[j].classList.remove('rel-activa');
+    }
+  }
+
+  const b_ft = document.getElementById('b_ft');
+  const fuegotiempo = document.getElementById('fuegotiempo');
+  b_ft.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        fuegotiempo.classList.toggle('rel-activa');
+  }
+
+  const b_fg = document.getElementById('b_fg');
+  const fuegoglitch = document.getElementById('fuegoglitch');
+  b_fg.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        fuegoglitch.classList.toggle('rel-activa');
+  }
+
+  const b_fd = document.getElementById('b_fd');
+  const fuegodescanso = document.getElementById('fuegodescanso');
+  b_fd.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        fuegodescanso.classList.toggle('rel-activa');
+  }
+
+  const b_dt = document.getElementById('b_dt');
+  const descansotiempo = document.getElementById('descansotiempo');
+  b_dt.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        descansotiempo.classList.toggle('rel-activa');
+  }
+
+  const b_dg = document.getElementById('b_dg');
+  const descansoglitch = document.getElementById('descansoglitch');
+  b_dg.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        descansoglitch.classList.toggle('rel-activa');
+  }
+
+  const b_tg = document.getElementById('b_tg');
+  const tiempoglitch = document.getElementById('tiempoglitch');
+  b_tg.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        tiempoglitch.classList.toggle('rel-activa');
+  }
+
+  const b_tfg = document.getElementById('b_tfg');
+  const tiempofuegoglitch = document.getElementById('tiempofuegoglitch');
+  b_tfg.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        tiempofuegoglitch.classList.toggle('rel-activa');
+  }
+
+  const b_fgd = document.getElementById('b_fgd');
+  const fuegoglitchdescanso = document.getElementById('fuegoglitchdescanso');
+  b_fgd.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        fuegoglitchdescanso.classList.toggle('rel-activa');
+  }
+
+  const b_tgd = document.getElementById('b_tgd');
+  const tiempoglitchdescanso = document.getElementById('tiempoglitchdescanso');
+  b_tgd.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        tiempoglitchdescanso.classList.toggle('rel-activa');
+  }
+
+  const b_ftd = document.getElementById('b_ftd');
+  const fuegotiempodescanso = document.getElementById('fuegotiempodescanso');
+  b_ftd.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        fuegotiempodescanso.classList.toggle('rel-activa');
+  }
+
+  const b_all = document.getElementById('b_all');
+  b_all.onclick = function(){
+        reset();
+        this.classList.toggle('but-activo');
+        fraseFinal.classList.toggle('rel-activa');
+  }
+
+
+</script>
